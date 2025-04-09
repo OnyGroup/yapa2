@@ -24,7 +24,7 @@ export default function SecuritySystemsPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Electronic Security Systems Installation</h1>
             <p className="text-xl md:text-2xl">
-              Welcome to Snowtech Electricals' Electronic Security Systems Installation services, where safety meets
+              Welcome to Snowtech Electricals&apos; Electronic Security Systems Installation services, where safety meets
               peace of mind. We specialize in designing, installing, and maintaining state-of-the-art security systems
               to protect your property, assets, and loved ones.
             </p>
@@ -59,7 +59,7 @@ export default function SecuritySystemsPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-[#4A4A9C] text-center">CCTV Installation</h3>
                 <p className="text-gray-700">
-                  Our experts will assess your property's security requirements and design a customized CCTV system that
+                  Our experts will assess your property&apos;s security requirements and design a customized CCTV system that
                   provides comprehensive coverage and maximum visibility.
                 </p>
               </CardContent>

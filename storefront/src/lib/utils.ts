@@ -1,43 +1,35 @@
-export const formatDate = (date: Date | number) => {
-	return new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(date);
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+type Money = {
+  amount: number;
+  currency: string;
+} | null | undefined;
+
+type MoneyRange = {
+  start: Money;
+  stop: Money;
 };
 
-export const formatMoney = (amount: number, currency: string) =>
-	new Intl.NumberFormat("en-US", {
-		style: "currency",
-		currency,
-	}).format(amount);
+export function formatMoneyRange({ start, stop }: MoneyRange): string {
+  if (!start) return "";
+  
+  const formatMoney = (money: Money): string => {
+    if (!money) return "";
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: money.currency,
+      minimumFractionDigits: 2
+    }).format(money.amount);
+  };
 
-export const formatMoneyRange = (
-	range: {
-		start?: { amount: number; currency: string } | null;
-		stop?: { amount: number; currency: string } | null;
-	} | null,
-) => {
-	const { start, stop } = range || {};
-	const startMoney = start && formatMoney(start.amount, start.currency);
-	const stopMoney = stop && formatMoney(stop.amount, stop.currency);
-
-	if (startMoney === stopMoney) {
-		return startMoney;
-	}
-
-	return `${startMoney} - ${stopMoney}`;
-};
-
-export function getHrefForVariant({
-	productSlug,
-	variantId,
-}: {
-	productSlug: string;
-	variantId?: string;
-}): string {
-	const pathname = `/products/${encodeURIComponent(productSlug)}`;
-
-	if (!variantId) {
-		return pathname;
-	}
-
-	const query = new URLSearchParams({ variant: variantId });
-	return `${pathname}?${query.toString()}`;
+  if (!stop || start?.amount === stop?.amount) {
+    return formatMoney(start);
+  }
+  
+  return `${formatMoney(start)} - ${formatMoney(stop)}`;
 }

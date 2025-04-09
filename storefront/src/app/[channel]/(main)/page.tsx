@@ -3,9 +3,9 @@ import { executeGraphQL } from "@/lib/graphql";
 import { ProductList } from "@/ui/components/ProductList";
 
 export const metadata = {
-	title: "ACME Storefront, powered by Saleor & Next.js",
+	title: "Snowtech Electronics Ltd",
 	description:
-		"Storefront Next.js Example for building performant e-commerce experiences with Saleor - the composable, headless commerce platform for global brands.",
+		"Snowtech Electronics Ltd. is a leading provider of high-quality electronics and gadgets. Our storefront, powered by Next.js and Django, offers a seamless shopping experience with a wide range of products to choose from.",
 };
 
 export default async function Page({ params }: { params: { channel: string } }) {

@@ -6,8 +6,8 @@ import { ProductList } from "@/ui/components/ProductList";
 import { ProductsPerPage } from "@/app/config";
 
 export const metadata = {
-	title: "Products · Saleor Storefront example",
-	description: "All products in Saleor Storefront example",
+	title: "Products · Snowtech Electronics Ltd.",
+	description: "All products in Snowtech Electronics Ltd",
 };
 
 export default async function Page({

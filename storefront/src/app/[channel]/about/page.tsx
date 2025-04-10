@@ -1,12 +1,45 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, ArrowRight, Eye, Target, Send } from "lucide-react"
+import { Phone, ArrowRight, Eye, Send, Handshake } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
-export default function AboutPage() {
+  export default function AboutPage() {
+    const teamMembers = [
+      {
+        name: "Parwizali Kassam",
+        title: "Chairman",
+        image: "/images/team/kassam.webp",
+      },
+      {
+        name: "Hamza Parwez",
+        title: "Director",
+        image: "/images/team/hamza.webp",
+      },
+      {
+        name: "Imran Sokwala",
+        title: "COO",
+        image: "/images/team/imran.webp",
+      },
+      {
+        name: "Fashtein Mutunga",
+        title: "Accounts Officer",
+        image: "/images/team/mutunga.webp",
+      },
+      {
+        name: "Ali Hashim",
+        title: "Technical Officer",
+        image: "/images/team/ali.webp",
+      },
+      {
+        name: "Yasmin Mwinyi",
+        title: "Admin & Marketing",
+        image: "/images/team/yasmin.webp",
+      },
+    ];
+
   return (
     <main className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -39,7 +72,7 @@ export default function AboutPage() {
               <Card className="bg-white/10 border-none">
                 <CardContent className="p-6 flex items-start gap-4">
                   <div className="bg-white rounded-full p-3 flex items-center justify-center">
-                    <Target className="h-6 w-6 text-[#4A4A9C]" />
+                    <Handshake className="h-6 w-6 text-[#4A4A9C]" />
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">Our Goal</h3>
@@ -87,7 +120,7 @@ export default function AboutPage() {
             <div className="flex justify-center">
               <div className="relative w-full max-w-md aspect-square">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/images/NCA4-Cert.webp?height=400&width=400"
                   alt="Recognition Certificate"
                   width={400}
                   height={400}
@@ -145,22 +178,22 @@ export default function AboutPage() {
       <section className="w-full bg-white py-16">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold text-center text-[#4A4A9C] mb-12">Our Team</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {Array.from({ length: 8 }).map((_, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="relative w-32 h-32 mb-4">
-                  <Image
-                    src={`/placeholder.svg?height=128&width=128&text=Team ${index + 1}`}
-                    alt={`Team Member ${index + 1}`}
-                    width={128}
-                    height={128}
-                    className="rounded-full object-cover"
-                  />
-                </div>
-                <h3 className="font-semibold text-lg text-[#4A4A9C]">Team Member {index + 1}</h3>
-                <p className="text-gray-600">Position Title</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="flex flex-col items-center text-center">
+              <div className="relative w-32 h-32 mb-4">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={128}
+                  height={128}
+                  className="rounded-full object-cover"
+                />
               </div>
-            ))}
+              <h3 className="font-semibold text-lg text-[#4A4A9C]">{member.name}</h3>
+              <p className="text-gray-600">{member.title}</p>
+            </div>
+          ))}
           </div>
         </div>
       </section>

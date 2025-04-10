@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, ArrowRight, Eye, Send, Handshake } from "lucide-react"
+import { Phone, ArrowRight, Eye, Send, Handshake, Award } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -40,6 +40,18 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
       },
     ];
 
+    const productImages = [
+      "/images/company-logos/samsung.webp",
+      "/images/company-logos/lg.webp",
+      "/images/company-logos/panasonic.webp",
+      "/images/company-logos/bruhm.webp",
+      "/images/company-logos/hik-vision.webp",
+      "/images/company-logos/snowtech.webp",
+      "/images/company-logos/toshiba.webp",
+      "/images/company-logos/zk-software.webp",
+      "/images/company-logos/zkteco.webp",
+    ]    
+
   return (
     <main className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -63,7 +75,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
                 <li>Power Backup Solutions</li>
               </ul>
               <div>
-                <Button asChild variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild variant="outline" className="border-[#4A4A9C] text-[#4A4A9C] hover:bg-[#4A4A9C]/10">
                   <Link href="/services">Our Services</Link>
                 </Button>
               </div>
@@ -118,13 +130,13 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
         <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
-              <div className="relative w-full max-w-md aspect-square">
+              <div className="relative w-full max-w-md">
                 <Image
-                  src="/images/NCA4-Cert.webp?height=400&width=400"
+                  src="/images/NCA4-Cert.webp"
                   alt="Recognition Certificate"
-                  width={400}
-                  height={400}
-                  className="rounded-lg shadow-lg object-cover"
+                  width={845}
+                  height={451}
+                  className="rounded-lg shadow-lg w-full h-auto object-contain"
                 />
               </div>
             </div>
@@ -135,14 +147,21 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
                 major Electrical Installations and we are also a registered NCA4 Mechanical Engineering Service
                 Contractor.
               </p>
-              <ul className="space-y-2 list-disc pl-5 text-gray-700">
-                <li>NCA4 Electrical Engineering Service Contractor</li>
-                <li>NCA4 Mechanical Engineering Service Contractor</li>
-              </ul>
+              <div className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <Award className="h-5 w-5 text-[#4A4A9C]" />
+                  <span>NCA4 Electrical Engineering Service Contractor</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award className="h-5 w-5 text-[#4A4A9C]" />
+                  <span>NCA4 Mechanical Engineering Service Contractor</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Products Carousel Section */}
       <section className="w-full bg-[#F5F5F5] py-16">
@@ -150,23 +169,24 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
           <h2 className="text-3xl font-bold text-center text-[#4A4A9C] mb-12">Our Products</h2>
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
-              {Array.from({ length: 6 }).map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <Image
-                          src={`/placeholder.svg?height=300&width=300&text=Product ${index + 1}`}
-                          alt={`Product ${index + 1}`}
-                          width={300}
-                          height={300}
-                          className="object-cover rounded-md"
-                        />
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
+            {productImages.map((src, index) => (
+              <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+                <div className="p-2">
+                  <Card className="shadow-none border-none bg-transparent">
+                  <CardContent className="flex items-center justify-center h-48 p-6">
+                    <div className="relative w-full h-full max-h-32">
+                      <Image
+                        src={src}
+                        alt={`Product ${index + 1}`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -212,9 +232,10 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
                   Get a Free Estimate <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10">
-                <a href="tel:+254700000000">
-                  <Phone className="mr-2 h-5 w-5" /> Call Us Now
+              <Button asChild size="lg" className="bg-white text-[#4A4A9C] hover:bg-white/90">
+                <a href="tel:+254722384322">
+                  <Phone className="mr-1.5 h-5 w-5" />
+                Call Us Now
                 </a>
               </Button>
             </div>

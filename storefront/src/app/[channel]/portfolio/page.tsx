@@ -11,10 +11,31 @@ const ProjectGalleryCarousel = dynamic(() => import("@/components/project-galler
 
 export default function ProjectsPage() {
   // Gallery images for the carousel
-  const galleryImages = Array.from({ length: 10 }).map((_, index) => ({
-    src: `/placeholder.svg?height=240&width=400&text=Gallery+Image+${index + 1}`,
-    alt: `Project Gallery Image ${index + 1}`,
-  }))
+  const galleryImages = [
+    { src: "/images/portfolio/gallery/g1.webp", alt: "Gallery Image 1" },
+    { src: "/images/portfolio/gallery/g2.webp", alt: "Gallery Image 2" },
+    { src: "/images/portfolio/gallery/g3.webp", alt: "Gallery Image 3" },
+    { src: "/images/portfolio/gallery/g4.webp", alt: "Gallery Image 4" },
+    { src: "/images/portfolio/gallery/g5.webp", alt: "Gallery Image 5" },
+    { src: "/images/portfolio/gallery/g6.webp", alt: "Gallery Image 6" },
+    { src: "/images/portfolio/gallery/g7.webp", alt: "Gallery Image 7" },
+    { src: "/images/portfolio/gallery/g8.webp", alt: "Gallery Image 8" },
+    { src: "/images/portfolio/gallery/g9.webp", alt: "Gallery Image 9" },
+    { src: "/images/portfolio/gallery/g10.webp", alt: "Gallery Image 10" },
+    { src: "/images/portfolio/gallery/g11.webp", alt: "Gallery Image 11" },
+    { src: "/images/portfolio/gallery/g12.webp", alt: "Gallery Image 12" },
+    { src: "/images/portfolio/gallery/g13.webp", alt: "Gallery Image 13" },
+    { src: "/images/portfolio/gallery/g14.webp", alt: "Gallery Image 14" },
+    { src: "/images/portfolio/gallery/g15.webp", alt: "Gallery Image 15" },
+    { src: "/images/portfolio/gallery/g16.webp", alt: "Gallery Image 16" },
+    { src: "/images/portfolio/gallery/g17.webp", alt: "Gallery Image 17" },
+    { src: "/images/portfolio/gallery/g18.webp", alt: "Gallery Image 18" },
+    { src: "/images/portfolio/gallery/g19.webp", alt: "Gallery Image 19" },
+    { src: "/images/portfolio/gallery/g20.webp", alt: "Gallery Image 20" },
+    { src: "/images/portfolio/gallery/g21.webp", alt: "Gallery Image 21" },
+    { src: "/images/portfolio/gallery/g22.webp", alt: "Gallery Image 22" },
+
+  ]
 
   return (
     <main className="flex flex-col min-h-screen">
@@ -22,7 +43,7 @@ export default function ProjectsPage() {
       <section className="relative w-full bg-[#4A4A9C] text-white py-24 md:py-32 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image src="/placeholder.svg?height=600&width=1600" alt="Projects Background" fill className="object-cover" />
+          <Image src="/images/portfolio/slider2.webp" alt="Projects Background" fill className="object-cover" />
         </div>
 
         <div className="container relative z-10 px-4 md:px-6">
@@ -44,7 +65,7 @@ export default function ProjectsPage() {
             <Card className="overflow-hidden">
               <div className="relative h-60">
                 <Image
-                  src="/placeholder.svg?height=240&width=400&text=FCB+Mihrab"
+                  src="/images/portfolio/fcb-mihrab.webp"
                   alt="FCB Mihrab Project"
                   fill
                   className="object-cover"
@@ -58,9 +79,6 @@ export default function ProjectsPage() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full border-[#4A4A9C] text-[#4A4A9C] hover:bg-[#4A4A9C]/10">
-                  View Details
-                </Button>
               </CardFooter>
             </Card>
 
@@ -68,7 +86,7 @@ export default function ProjectsPage() {
             <Card className="overflow-hidden">
               <div className="relative h-60">
                 <Image
-                  src="/placeholder.svg?height=240&width=400&text=Premier+Foods"
+                  src="/images/portfolio/premier-foods.webp"
                   alt="Premier Foods Project"
                   fill
                   className="object-cover"
@@ -82,9 +100,6 @@ export default function ProjectsPage() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full border-[#4A4A9C] text-[#4A4A9C] hover:bg-[#4A4A9C]/10">
-                  View Details
-                </Button>
               </CardFooter>
             </Card>
 
@@ -92,7 +107,7 @@ export default function ProjectsPage() {
             <Card className="overflow-hidden">
               <div className="relative h-60">
                 <Image
-                  src="/placeholder.svg?height=240&width=400&text=Tosha+Petroleum"
+                  src="/images/portfolio/tosha.webp"
                   alt="Tosha Petroleum Project"
                   fill
                   className="object-cover"
@@ -106,9 +121,6 @@ export default function ProjectsPage() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full border-[#4A4A9C] text-[#4A4A9C] hover:bg-[#4A4A9C]/10">
-                  View Details
-                </Button>
               </CardFooter>
             </Card>
 
@@ -116,7 +128,7 @@ export default function ProjectsPage() {
             <Card className="overflow-hidden">
               <div className="relative h-60">
                 <Image
-                  src="/placeholder.svg?height=240&width=400&text=First+Community+Bank"
+                  src="/images/portfolio/first-community-bank.webp"
                   alt="First Community Bank Project"
                   fill
                   className="object-cover"
@@ -130,9 +142,6 @@ export default function ProjectsPage() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full border-[#4A4A9C] text-[#4A4A9C] hover:bg-[#4A4A9C]/10">
-                  View Details
-                </Button>
               </CardFooter>
             </Card>
 
@@ -140,7 +149,7 @@ export default function ProjectsPage() {
             <Card className="overflow-hidden">
               <div className="relative h-60">
                 <Image
-                  src="/placeholder.svg?height=240&width=400&text=Tullow+Oil"
+                  src="/images/portfolio/tullow-oil.webp"
                   alt="Tullow Oil Project"
                   fill
                   className="object-cover"
@@ -154,9 +163,6 @@ export default function ProjectsPage() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full border-[#4A4A9C] text-[#4A4A9C] hover:bg-[#4A4A9C]/10">
-                  View Details
-                </Button>
               </CardFooter>
             </Card>
 
@@ -164,7 +170,7 @@ export default function ProjectsPage() {
             <Card className="overflow-hidden">
               <div className="relative h-60">
                 <Image
-                  src="/placeholder.svg?height=240&width=400&text=Premier+Bank"
+                  src="/images/portfolio/premier-bank.webp"
                   alt="Premier Bank Project"
                   fill
                   className="object-cover"
@@ -173,13 +179,10 @@ export default function ProjectsPage() {
               <CardContent className="pt-6">
                 <h2 className="text-2xl font-bold text-[#4A4A9C] mb-2">Premier Bank</h2>
                 <p className="text-gray-700">
-                  Handled Full project management and office fit-out for Premier Bank's new corporate offices.
+                  Handled Full project management and office fit-out for Premier Bank&apos;s new corporate offices.
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full border-[#4A4A9C] text-[#4A4A9C] hover:bg-[#4A4A9C]/10">
-                  View Details
-                </Button>
               </CardFooter>
             </Card>
           </div>
@@ -191,7 +194,7 @@ export default function ProjectsPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
           <Image
-            src="/placeholder.svg?height=600&width=1600"
+            src="/images/portfolio/roofing-service-commercial.webp?height=470&width=1200"
             alt="Working Process Background"
             fill
             className="object-cover"
@@ -203,7 +206,7 @@ export default function ProjectsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-white/10 border-none">
-              <CardContent className="p-6 text-center">
+            <CardContent className="p-6 text-center text-white">
                 <div className="text-4xl font-bold mb-4">01.</div>
                 <h3 className="text-xl font-bold mb-3">Consultation</h3>
                 <p>
@@ -214,7 +217,7 @@ export default function ProjectsPage() {
             </Card>
 
             <Card className="bg-white/10 border-none">
-              <CardContent className="p-6 text-center">
+            <CardContent className="p-6 text-center text-white">
                 <div className="text-4xl font-bold mb-4">02.</div>
                 <h3 className="text-xl font-bold mb-3">Proposal</h3>
                 <p>
@@ -225,7 +228,8 @@ export default function ProjectsPage() {
             </Card>
 
             <Card className="bg-white/10 border-none">
-              <CardContent className="p-6 text-center">
+            <CardContent className="p-6 text-center text-white">
+
                 <div className="text-4xl font-bold mb-4">03.</div>
                 <h3 className="text-xl font-bold mb-3">Installation</h3>
                 <p>
@@ -236,7 +240,7 @@ export default function ProjectsPage() {
             </Card>
 
             <Card className="bg-white/10 border-none">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-6 text-center text-white">
                 <div className="text-4xl font-bold mb-4">04.</div>
                 <h3 className="text-xl font-bold mb-3">Inspection</h3>
                 <p>
@@ -262,7 +266,7 @@ export default function ProjectsPage() {
       <section className="relative w-full bg-[#4A4A9C] text-white py-16 md:py-24">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image src="/placeholder.svg?height=600&width=1600" alt="FAQ Background" fill className="object-cover" />
+          <Image src="/images/portfolio/rooftop-hvac.webp?height=933&width=1400" alt="FAQ Background" fill className="object-cover" />
         </div>
 
         <div className="container relative z-10 px-4 md:px-6">
@@ -307,7 +311,7 @@ export default function ProjectsPage() {
                 </AccordionTrigger>
                 <AccordionContent>
                   Scheduling a consultation with us is easy! Simply contact our team via phone, email, or through the
-                  online form on our website. We'll work with you to find a convenient time for an in-person or virtual
+                  online form on our website. We&apos;ll work with you to find a convenient time for an in-person or virtual
                   consultation to discuss your project requirements.
                 </AccordionContent>
               </AccordionItem>

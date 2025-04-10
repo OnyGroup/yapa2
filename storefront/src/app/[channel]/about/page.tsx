@@ -56,6 +56,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
     <main className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="w-full bg-[#4A4A9C] text-white py-16 md:py-24">
+      <div className="absolute inset-0 opacity-20">
+        <img src="/images/hvac-view.webp" alt="HVAC view from rooftop" className="w-full h-full object-cover" />
+      </div>
         <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -87,8 +90,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
                     <Handshake className="h-6 w-6 text-[#4A4A9C]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold">Our Goal</h3>
-                    <p>
+                    <h3 className="text-xl font-bold text-white">Our Goal</h3>
+                    <p className="text-white">
                       We aim at becoming a preferred contractor in providing state of the art electrical/electronic
                       technology solutions.
                     </p>
@@ -101,8 +104,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
                     <Eye className="h-6 w-6 text-[#4A4A9C]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold">Vision</h3>
-                    <p>
+                    <h3 className="text-xl font-bold text-white">Vision</h3>
+                    <p className="text-white">
                       We strive to be the best-in-class distributors of quality product and services and a responsible
                       corporate citizen.
                     </p>
@@ -115,8 +118,10 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
                     <Send className="h-6 w-6 text-[#4A4A9C]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold">Mission</h3>
-                    <p>To be the leading provider of innovative and high quality electronic systems.</p>
+                    <h3 className="text-xl font-bold text-white">Mission</h3>
+                    <p className="text-white">
+                      To be the leading provider of innovative and high quality electronic systems.
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -219,14 +224,19 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
       </section>
 
       {/* Contact CTA Section */}
-      <section className="w-full bg-[#4A4A9C] text-white py-16">
-        <div className="container px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
+      <section className="w-full bg-[#4A4A9C] text-white py-16 relative">
+        {/* Background placeholder image */}
+        <div className="absolute inset-0 opacity-20">
+          <img src="/images/nairobi-skyline.webp" alt="nairobi skyline image" className="w-full h-full object-cover" />
+        </div>
+        
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="max-w-3xl text-left space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">Let&apos;s Talk About Your Next Project</h2>
             <p className="text-xl">
               Ready to get started or have questions about our services? Contact Snowtech Electricals today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-white text-[#4A4A9C] hover:bg-white/90">
                 <Link href="/contact">
                   Get a Free Estimate <ArrowRight className="ml-2 h-5 w-5" />

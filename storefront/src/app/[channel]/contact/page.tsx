@@ -34,7 +34,7 @@ export default function ContactPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
           <Image
-            src="/placeholder.svg?height=600&width=1600"
+            src="/images/roofing-service-commercial.webp?height=1200&width=470"
             alt="Contact Us Background"
             fill
             className="object-cover"

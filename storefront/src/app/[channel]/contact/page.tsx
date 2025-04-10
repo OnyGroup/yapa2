@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 
 import Image from "next/image"
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Navigation } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -187,6 +187,46 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Maps Section */}
+      <section className="w-full py-12 bg-gray-50">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-[#4A4A9C]">Find Us</h2>
+            <p className="text-gray-700 mt-2">Visit our office at 11 Rosewood Avenue, Kilimani</p>
+          </div>
+          
+          <div className="w-full h-96 shadow-lg rounded-lg overflow-hidden relative">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7874218547566!2d36.791506376391124!3d-1.2880014990631842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10833fe0f8bd%3A0x47bd4f4a6f85a832!2sSnowtech%20Electronics%20Limited!5e0!3m2!1sen!2sus!4v1649327809461!5m2!1sen!2sus" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Snowtech Electronics Location"
+            ></iframe>
+          </div>
+          
+          <div className="mt-6 flex justify-center">
+            <Button 
+              className="bg-[#4A4A9C] hover:bg-[#3A3A8C] text-white"
+              asChild
+            >
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=-1.288001,36.793695&destination_place_id=5167809828455806914&travelmode=driving"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Navigation className="h-5 w-5" />
+                Get Directions to Our Office
+              </a>
+            </Button>
           </div>
         </div>
       </section>

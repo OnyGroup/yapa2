@@ -6,21 +6,38 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function HVACSystemsPage() {
+
+  const brands = [
+    "/images/hvac-systems/snowtech.webp",
+    "/images/hvac-systems/panasonic.webp",
+    "/images/hvac-systems/lg.webp",
+    "/images/hvac-systems/samsung.webp",
+    "/images/hvac-systems/daikin.webp",
+    "/images/hvac-systems/bosch.webp",
+  ]
+
+  const galleryImages = [
+    "/images/hvac-systems/pic-11.webp",
+    "/images/hvac-systems/pic-55.webp",
+    "/images/hvac-systems/pic-33.webp",
+  ]
+  
   return (
     <main className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full bg-[#4A4A9C]/10 py-24 md:py-32 overflow-hidden">
+      <section className="relative w-full bg-[#4A4A9C]/10 min-h-screen overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
-            src="/placeholder.svg?height=600&width=1600&text=HVAC+Systems"
+            src="/images/hvac-systems/hero-112.webp"
             alt="HVAC Systems Background"
             fill
             className="object-cover"
           />
         </div>
 
-        <div className="container relative z-10 px-4 md:px-6">
+        {/* Make container take full height and center content vertically */}
+        <div className="container relative z-10 px-4 md:px-6 flex items-center min-h-screen">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#4A4A9C]">
               HVAC Systems Supply and Installation in Kenya
@@ -91,11 +108,11 @@ export default function HVACSystemsPage() {
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold text-center text-[#4A4A9C] mb-12">Brands We Work With</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {Array.from({ length: 6 }).map((_, index) => (
+            {brands.map((src, index) => (
               <div key={index} className="flex justify-center">
                 <Image
-                  src={`/placeholder.svg?height=80&width=160&text=Brand+${index + 1}`}
-                  alt={`Brand ${index + 1}`}
+                  src={src}
+                  alt={`Brand logo ${index + 1}`}
                   width={160}
                   height={80}
                   className="object-contain"
@@ -124,7 +141,7 @@ export default function HVACSystemsPage() {
             </div>
             <div>
               <Image
-                src="/placeholder.svg?height=800&width=1200&text=Professional+HVAC+Installation"
+                src="/images/hvac-systems/rooftop-hvac.webp"
                 alt="Professional HVAC Installation"
                 width={1200}
                 height={800}
@@ -140,10 +157,10 @@ export default function HVACSystemsPage() {
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold text-center text-[#4A4A9C] mb-12">Our Recent Installations</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {Array.from({ length: 3 }).map((_, index) => (
+            {galleryImages.map((src, index) => (
               <div key={index} className="overflow-hidden rounded-lg shadow-lg">
                 <Image
-                  src={`/placeholder.svg?height=500&width=650&text=Installation+${index + 1}`}
+                  src={src}
                   alt={`HVAC Installation ${index + 1}`}
                   width={650}
                   height={500}
@@ -161,7 +178,7 @@ export default function HVACSystemsPage() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <Image
-                src="/placeholder.svg?height=508&width=800&text=Quality+AC+Systems"
+                src="/images/hvac-systems/snowtech-hvac.webp"
                 alt="Quality Air Conditioning Systems"
                 width={800}
                 height={508}
@@ -205,7 +222,7 @@ export default function HVACSystemsPage() {
       <section className="relative w-full bg-[#4A4A9C] text-white py-16">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image src="/placeholder.svg?height=400&width=1600" alt="CTA Background" fill className="object-cover" />
+          <Image src="/images/hvac-systems/nairobi-skyline.webp" alt="CTA Background" fill className="object-cover" />
         </div>
 
         <div className="container relative z-10 px-4 md:px-6">
@@ -216,8 +233,8 @@ export default function HVACSystemsPage() {
               <Button asChild size="lg" className="bg-white text-[#4A4A9C] hover:bg-white/90">
                 <Link href="/contact">Get a Free Estimate</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10">
-                <a href="tel:+254700000000">
+              <Button asChild size="lg" className="bg-white text-[#4A4A9C] hover:bg-white/90">
+                <a href="tel:+254722384322">
                   <Phone className="mr-2 h-5 w-5" /> Call Us Now
                 </a>
               </Button>

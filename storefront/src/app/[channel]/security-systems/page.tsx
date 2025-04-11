@@ -9,20 +9,25 @@ export default function SecuritySystemsPage() {
   return (
     <main className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full bg-[#4A4A9C] text-white py-24 md:py-32 overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0 opacity-20">
+      <section className="relative w-full text-white py-24 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1600&text=Security+Systems"
+            src="/images/security-systems/security-camera.webp"
             alt="Security Systems Background"
             fill
             className="object-cover"
           />
         </div>
 
-        <div className="container relative z-10 px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Electronic Security Systems Installation</h1>
+        {/* Indigo overlay on the left side only */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#4A4A9C] to-transparent" />
+
+        <div className="container relative z-20 px-4 md:px-6">
+          <div className="max-w-3xl text-left">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Electronic Security Systems Installation
+            </h1>
             <p className="text-xl md:text-2xl">
               Welcome to Snowtech Electricals&apos; Electronic Security Systems Installation services, where safety meets
               peace of mind. We specialize in designing, installing, and maintaining state-of-the-art security systems
@@ -31,6 +36,8 @@ export default function SecuritySystemsPage() {
           </div>
         </div>
       </section>
+
+
 
       {/* Services Grid Section */}
       <section className="w-full py-16 md:py-24">
@@ -125,78 +132,11 @@ export default function SecuritySystemsPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="w-full py-16 bg-gray-50">
-        <div className="container px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div>
-              <Image
-                src="/placeholder.svg?height=600&width=800&text=Security+Benefits"
-                alt="Security Benefits"
-                width={800}
-                height={600}
-                className="rounded-lg shadow-lg object-cover w-full"
-              />
-            </div>
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-[#4A4A9C]">Why Choose Our Security Systems?</h2>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <div className="bg-[#4A4A9C] rounded-full p-1 mt-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Customized Solutions</h3>
-                    <p className="text-gray-700">
-                      We design security systems tailored to your specific needs and property layout.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="bg-[#4A4A9C] rounded-full p-1 mt-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Professional Installation</h3>
-                    <p className="text-gray-700">
-                      Our certified technicians ensure proper installation and configuration of all security components.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="bg-[#4A4A9C] rounded-full p-1 mt-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Ongoing Support</h3>
-                    <p className="text-gray-700">
-                      We provide maintenance, troubleshooting, and system upgrades to keep your security system
-                      functioning optimally.
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="bg-[#4A4A9C] rounded-full p-1 mt-1">
-                    <ArrowRight className="h-4 w-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Advanced Technology</h3>
-                    <p className="text-gray-700">
-                      We use the latest security technologies to provide reliable protection for your property.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="relative w-full bg-[#4A4A9C] text-white py-16">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image src="/placeholder.svg?height=400&width=1600" alt="CTA Background" fill className="object-cover" />
+          <Image src="/images/security-systems/nairobi-skyline.webp" alt="CTA Background" fill className="object-cover" />
         </div>
 
         <div className="container relative z-10 px-4 md:px-6">
@@ -211,7 +151,7 @@ export default function SecuritySystemsPage() {
                   Get a Free Estimate <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10">
+              <Button asChild size="lg" className="bg-white text-[#4A4A9C] hover:bg-white/90">
                 <a href="tel:+254700000000">
                   <Phone className="mr-2 h-5 w-5" /> Call Us Now
                 </a>

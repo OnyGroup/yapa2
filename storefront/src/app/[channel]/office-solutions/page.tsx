@@ -55,7 +55,7 @@ export default function OfficeSolutionsPage() {
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0 opacity-20">
                   <Image
-                    src="/placeholder.svg?height=400&width=600&text=Cabling+Services"
+                    src="/images/office-solutions/connection-data.webp"
                     alt="Cabling Services"
                     fill
                     className="object-cover"

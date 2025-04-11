@@ -12,7 +12,7 @@ export default function OfficeSolutionsPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
           <Image
-            src="/placeholder.svg?height=600&width=1600&text=Office+Solutions"
+            src="/images/office-solutions/scaling-networking.webp"
             alt="Office Solutions Background"
             fill
             className="object-cover"
@@ -139,37 +139,11 @@ export default function OfficeSolutionsPage() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="w-full py-16 md:py-24">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center text-[#4A4A9C] mb-12">Our Recent Projects</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-lg">
-                <Image
-                  src={`/placeholder.svg?height=400&width=600&text=Project+${index + 1}`}
-                  alt={`Office Solutions Project ${index + 1}`}
-                  width={600}
-                  height={400}
-                  className="object-cover w-full transition-transform hover:scale-105 duration-300"
-                />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg text-[#4A4A9C]">Project {index + 1}</h3>
-                  <p className="text-gray-700">
-                    Structured cabling and networking solution for a corporate office in Nairobi.
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="relative w-full bg-[#4A4A9C] text-white py-16">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image src="/placeholder.svg?height=400&width=1600" alt="CTA Background" fill className="object-cover" />
+          <Image src="/images/nairobi-skyline.webp" alt="CTA Background" fill className="object-cover" />
         </div>
 
         <div className="container relative z-10 px-4 md:px-6">
@@ -184,8 +158,8 @@ export default function OfficeSolutionsPage() {
                   Get a Free Estimate <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10">
-                <a href="tel:+254700000000">
+              <Button asChild size="lg" className="bg-white text-[#4A4A9C] hover:bg-white/90">
+                <a href="tel:+254722384322">
                   <Phone className="mr-2 h-5 w-5" /> Call Us Now
                 </a>
               </Button>

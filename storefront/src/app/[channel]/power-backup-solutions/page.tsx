@@ -12,7 +12,7 @@ export default function PowerBackupSolutionsPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
           <Image
-            src="/placeholder.svg?height=600&width=1600&text=Power+Backup"
+            src="/images/power-backup/power-backup.webp"
             alt="Power Backup Solutions Background"
             fill
             className="object-cover"
@@ -38,7 +38,7 @@ export default function PowerBackupSolutionsPage() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <Image
-                src="/placeholder.svg?height=600&width=800&text=Power+Backup+Solutions"
+                src="/images/power-backup/ups.webp"
                 alt="Power Backup Solutions"
                 width={800}
                 height={600}
@@ -169,7 +169,7 @@ export default function PowerBackupSolutionsPage() {
       <section className="relative w-full bg-[#4A4A9C] text-white py-16">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image src="/placeholder.svg?height=400&width=1600" alt="CTA Background" fill className="object-cover" />
+          <Image src="/images/nairobi-skyline.webp" alt="CTA Background" fill className="object-cover" />
         </div>
 
         <div className="container relative z-10 px-4 md:px-6">
@@ -184,7 +184,7 @@ export default function PowerBackupSolutionsPage() {
                   Get a Free Estimate <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white hover:bg-white/10">
+              <Button asChild size="lg" className="bg-white text-[#4A4A9C] hover:bg-white/90">
                 <a href="tel:+254700000000">
                   <Phone className="mr-2 h-5 w-5" /> Call Us Now
                 </a>
